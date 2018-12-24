@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
@@ -70,19 +70,264 @@
   <div class="row"> 
     <div class="col-sm-12">
       <div class="row justify-content-center">
-        <div class="col-3">
-          <div class="sidebar p-2">
-            <h5 class="orange-text"><i class="fas fa-sliders-h"></i> Filter the results</h5>
+        <div class="col-sm-12 col-md-2 sidebar-col">
+          <!--mobile sidebar start-->
+            <div class="sidebar-mobile p-1">
+              <h6 class="orange-text"><i class="fas fa-sliders-h"></i> Filter the results</h6>
+              <a class="blue-text">Remove all filters</a>
+              <h6 class="mt-5">STATUS</h6>
+              <div class="row justify-content-center">
+                <div class="col-6 text-center px-2">
+                  <div class="car-status">
+                    <p>Used</p>
+                    <p>({000})</p>
+                  </div>
+                </div>
+                <div class="col-6 text-center px-2">
+                  <div class="car-status">
+                    <p>New</p>
+                    <p>({000})</p>
+                  </div>
+                </div>
+              </div>
+              <h6 class="mt-5">BRANDS</h6>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+                <label class="form-check-label" for="{brand#1}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#2}">
+                <label class="form-check-label" for="{brand#2}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#3}">
+                <label class="form-check-label" for="{brand#3}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#4}">
+                <label class="form-check-label" for="{brand#4}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#5}">
+                <label class="form-check-label" for="{brand#5}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+                <label class="form-check-label" for="{brand#1}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+                <label class="form-check-label" for="{brand#1}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div id="more-brands">
+                <div class="form-check car-brands">
+                  <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                  <label class="form-check-label" for="{brand#more}">
+                    {brands}
+                  </label>
+                  <div class="float-right brand-count">{#}</div>
+                </div>
+                <div class="form-check car-brands">
+                  <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                  <label class="form-check-label" for="{brand#more}">
+                    {brands}
+                  </label>
+                  <div class="float-right brand-count">{#}</div>
+                </div>
+                <div class="form-check car-brands">
+                  <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                  <label class="form-check-label" for="{brand#more}">
+                    {brands}
+                  </label>
+                  <div class="float-right brand-count">{#}</div>
+                </div>
+              </div>
+              <div class="my-1"><a class="blue-text light-text more-brands" id="more-brands-toggle">All Brands</a></div>
+              <h6 class="mt-5 text-uppercase">Purchase price</h6>
+              <div id="stock-range">
+                <input type="text" id="price-selector-mobile" class="js-range-slider" name="my_range" value="" />
+              </div>
+              <h6 class="mt-5 text-uppercase">Lease Amount</h6>
+              <select class="lease-min-select custom-select my-2">
+                <option selected>From € 0 per  month</option>
+                <option value="1">---</option>
+                <option value="2">---</option>
+                <option value="3">---</option>
+              </select>
+              <select class="lease-max-select custom-select my-2">
+                <option selected>Up to no maximum</option>
+                <option value="1">---</option>
+                <option value="2">---</option>
+                <option value="3">---</option>
+              </select>
+              <h6 class="mt-5 text-uppercase">Fuel</h6>
+                <div class="form-check fuel-type">
+                  <input class="form-check-input" type="checkbox" value="" id="fuel-petrol">
+                  <label class="form-check-label" for="fuel-petrol">
+                    Petrol
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check fuel-type">
+                  <input class="form-check-input" type="checkbox" value="" id="fuel-hybrid">
+                  <label class="form-check-label" for="fuel-hybrid">
+                    Hybrid
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check fuel-type">
+                  <input class="form-check-input" type="checkbox" value="" id="fuel-disel">
+                  <label class="form-check-label" for="fuel-disel">
+                    Disel
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+              <h6 class="mt-5 text-uppercase">Construction Year</h6>
+                <select class="year-max-select custom-select my-2">
+                  <option selected>2004</option>
+                  <option value="1">---</option>
+                  <option value="2">---</option>
+                  <option value="3">---</option>
+                </select>
+                <select class="year-max-select custom-select my-2">
+                  <option selected>2009</option>
+                  <option value="1">---</option>
+                  <option value="2">---</option>
+                  <option value="3">---</option>
+                </select>
+              <h6 class="mt-5 text-uppercase">Transmission</h6>
+                <div class="form-check gear-type">
+                  <input class="form-check-input" type="checkbox" value="" id="automatic">
+                  <label class="form-check-label" for="fuel-petrol">
+                    Automatic
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check gear-type">
+                  <input class="form-check-input" type="checkbox" value="" id="manual">
+                  <label class="form-check-label" for="fuel-hybrid">
+                    Manual
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check gear-type">
+                  <input class="form-check-input" type="checkbox" value="" id="semi-auto">
+                  <label class="form-check-label" for="fuel-disel">
+                    Semi-Automatic
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+
+              <h6 class="mt-5 text-uppercase">Colors</h6>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #93939e; border-color: #93939e"></i>
+                    Grey
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #000000; border-color: #000000"></i>
+                    Black
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #ffffff; border-color: #d3d8e2"></i>
+                    White
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #00b0ff; border-color: #00b0ff;"></i>
+                    Blue
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #fe3600; border-color: #fe3600;"></i>
+                    Red
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #b45b16; border-color: #b45b16;"></i>
+                    Brown
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #26d460; border-color: #26d460;"></i>
+                    Green
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #fe6000; border-color: #fe6000;"></i>
+                    Orange
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: #b740ff; border-color: #b740ff;"></i>
+                    Violet
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+                <div class="form-check vehicle-color">
+                  <input class="form-check-input" type="checkbox" value="" id="">
+                  <label class="form-check-label" for=""><i class="color-icon" style="background-color: transparent; border-color: transparent;"></i>
+                    Other
+                  </label>
+                  <div class="float-right count">{#}</div>
+                </div>
+
+            </div>
+            <a class="orange-text d-sm-block d-md-none sidebar-toggle"><i class="fas fa-sliders-h"></i>Show Filters</a>
+
+          <!--mobile sidebar end-->
+
+          <div class="sidebar p-1 d-none d-md-block">
+            <h6 class="orange-text"><i class="fas fa-sliders-h"></i> Filter the results</h6>
             <a class="blue-text">Remove all filters</a>
             <h6 class="mt-5">STATUS</h6>
             <div class="row justify-content-center">
-              <div class="col-6 text-center px-3">
+              <div class="col-6 text-center px-2">
                 <div class="car-status">
                   <p>Used</p>
                   <p>({000})</p>
                 </div>
               </div>
-              <div class="col-6 text-center px-3">
+              <div class="col-6 text-center px-2">
                 <div class="car-status">
                   <p>New</p>
                   <p>({000})</p>
@@ -90,16 +335,876 @@
               </div>
             </div>
             <h6 class="mt-5">BRANDS</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
-                Default checkbox
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+              <label class="form-check-label" for="{brand#1}">
+                {brands}
               </label>
+              <div class="float-right brand-count">{#}</div>
             </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#2}">
+              <label class="form-check-label" for="{brand#2}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#3}">
+              <label class="form-check-label" for="{brand#3}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#4}">
+              <label class="form-check-label" for="{brand#4}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#5}">
+              <label class="form-check-label" for="{brand#5}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+              <label class="form-check-label" for="{brand#1}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div class="form-check car-brands">
+              <input class="form-check-input" type="checkbox" value="" id="{brand#1}">
+              <label class="form-check-label" for="{brand#1}">
+                {brands}
+              </label>
+              <div class="float-right brand-count">{#}</div>
+            </div>
+            <div id="more-brands">
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                <label class="form-check-label" for="{brand#more}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                <label class="form-check-label" for="{brand#more}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+              <div class="form-check car-brands">
+                <input class="form-check-input" type="checkbox" value="" id="{brand#more}">
+                <label class="form-check-label" for="{brand#more}">
+                  {brands}
+                </label>
+                <div class="float-right brand-count">{#}</div>
+              </div>
+            </div>
+            <div class="my-1"><a class="blue-text light-text more-brands" id="more-brands-toggle">All Brands</a></div>
+            <h6 class="mt-5 text-uppercase">Purchase price</h6>
+            <div id="stock-range">
+              <input type="text" id="price-selector" class="js-range-slider" name="my_range" value="" />
+            </div>
+            <h6 class="mt-5 text-uppercase">Lease Amount</h6>
+            <select class="lease-min-select custom-select my-2">
+              <option selected>From € 0 per  month</option>
+              <option value="1">---</option>
+              <option value="2">---</option>
+              <option value="3">---</option>
+            </select>
+            <select class="lease-max-select custom-select my-2">
+              <option selected>Up to no maximum</option>
+              <option value="1">---</option>
+              <option value="2">---</option>
+              <option value="3">---</option>
+            </select>
+            <h6 class="mt-5 text-uppercase">Fuel</h6>
+              <div class="form-check fuel-type">
+                <input class="form-check-input" type="checkbox" value="" id="fuel-petrol">
+                <label class="form-check-label" for="fuel-petrol">
+                  Petrol
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check fuel-type">
+                <input class="form-check-input" type="checkbox" value="" id="fuel-hybrid">
+                <label class="form-check-label" for="fuel-hybrid">
+                  Hybrid
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check fuel-type">
+                <input class="form-check-input" type="checkbox" value="" id="fuel-disel">
+                <label class="form-check-label" for="fuel-disel">
+                  Disel
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+            <h6 class="mt-5 text-uppercase">Construction Year</h6>
+              <select class="year-max-select custom-select my-2">
+                <option selected>2004</option>
+                <option value="1">---</option>
+                <option value="2">---</option>
+                <option value="3">---</option>
+              </select>
+              <select class="year-max-select custom-select my-2">
+                <option selected>2009</option>
+                <option value="1">---</option>
+                <option value="2">---</option>
+                <option value="3">---</option>
+              </select>
+            <h6 class="mt-5 text-uppercase">Transmission</h6>
+              <div class="form-check gear-type">
+                <input class="form-check-input" type="checkbox" value="" id="automatic">
+                <label class="form-check-label" for="fuel-petrol">
+                  Automatic
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check gear-type">
+                <input class="form-check-input" type="checkbox" value="" id="manual">
+                <label class="form-check-label" for="fuel-hybrid">
+                  Manual
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check gear-type">
+                <input class="form-check-input" type="checkbox" value="" id="semi-auto">
+                <label class="form-check-label" for="fuel-disel">
+                  Semi-Automatic
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+
+            <h6 class="mt-5 text-uppercase">Colors</h6>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #93939e; border-color: #93939e"></i>
+                  Grey
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #000000; border-color: #000000"></i>
+                  Black
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #ffffff; border-color: #d3d8e2"></i>
+                  White
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #00b0ff; border-color: #00b0ff;"></i>
+                  Blue
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #fe3600; border-color: #fe3600;"></i>
+                  Red
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #b45b16; border-color: #b45b16;"></i>
+                  Brown
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #26d460; border-color: #26d460;"></i>
+                  Green
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #fe6000; border-color: #fe6000;"></i>
+                  Orange
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: #b740ff; border-color: #b740ff;"></i>
+                  Violet
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+              <div class="form-check vehicle-color">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for=""><i class="color-icon" style="background-color: transparent; border-color: transparent;"></i>
+                  Other
+                </label>
+                <div class="float-right count">{#}</div>
+              </div>
+
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-sm-12 col-md-10">
+          <div class="row align-items-center">
+            <div class="col align-self-start">
+              <h4 class="green-text font-weight-bold ml-3">000 <small class="dark-blue-2 font-weight-bold">cars found</small></h4>
+            </div>
+            <div class="col align-self-end">
+              <select class="custom-select custom-select-sm float-right sorting mr-3">
+                <option selected>Last Added</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mx-2">    
 
+              <!--Grid column Start-->
+              <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow  new-vehicle">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+                <!--Grid column End-->
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow popular-vehicle">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3 car-col">
+                <div class="m-2 col-shadow">
+                  <img class="img-fluid" src="https://via.placeholder.com/400x200.png?text=Placeholder">
+                    <div class="car-col-details p-2">
+                      <h5 class="blue-text mb-0 fw-600">Vehicle Name</h5>
+                      <p class="orange-text mb-0">Vehicle features</p>
+                      <p class="light-text grey-text">Fuel - doors - year - 00,000 km</p>
+                      <hr />
+                      <table class="table table-sm table-borderless">
+                            <thead>
+                              <tr>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Closing date</th>
+                                <th scope="col">Lease p/m</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td scope="row" class="light-text">60 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">48 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                              <tr>
+                                <td scope="row" class="light-text">36 Months</td>
+                                <td class="light-text">{closing_rate}</td>
+                                <td class="light-text">{pm_rate}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <a class="btn btn-primary text-uppercase btn-green btn-block mb-2">Lease Term {term}</a>
+                      </div>
+                  </div>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center text-center mt-5">
+                  <a class="btn btn-primary load-more">Load More <i class="fas fa-plus"></i></a>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -182,7 +1287,7 @@
 
 
     <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
@@ -190,9 +1295,21 @@
 
 
     <script type="text/javascript">
-      jQuery(document).ready(function(){
-          $(function () {
-             $("#price-selector").ionRangeSlider({
+      $(document).ready(function(){
+          $("#more-brands-toggle").click(function(){
+              $("#more-brands").slideToggle("200");
+              $(this).toggleClass("more-brands less-brands");
+              $(this).text(function(i, v){
+                return v === 'All Brands' ? 'Less Brands' : 'All Brands'
+            })
+          });
+          $(".sidebar-toggle").click(function(){
+              $(".sidebar-mobile").slideToggle("200");
+              $(this).text(function(i, v){
+                return v === 'Show Filters' ? 'Hide Filters' : 'Show Filters'
+            })
+          });
+          $("#price-selector").ionRangeSlider({
                 skin: "big",
                 type: "double",
                 grid: false,
@@ -202,66 +1319,18 @@
                 to: 800,
                 prefix: "€"
               });
-             });
-            
-                 $('.main-img').slick({
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  fade: true,
-                  asNavFor: '.gallery-nav'
-                });
-                $('.gallery-nav').slick({
-                  slidesToShow: 5,
-                  slidesToScroll: 1,
-                  asNavFor: '.main-img',
-                  dots: false,
-                  arrows: true,
-                  prevArrow: $('.slider-prev'),
-                  nextArrow: $('.slider-next'),
-                  focusOnSelect: true
-                });
-            $(function() {
-              $('.pricing-box').on('click', '.pricing-col', function() {
-                $('.pricing-box .pricing-col.active').removeClass('active');
-                $(this).addClass('active');
+          $("#price-selector-mobile").ionRangeSlider({
+                skin: "big",
+                type: "double",
+                grid: false,
+                min: 0,
+                max: 2000,
+                from: 200,
+                to: 800,
+                prefix: "€"
               });
-            });
-            $('.testimonial').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                prevArrow: $('.slider-prev'),
-                nextArrow: $('.slider-next'),
-                speed: 500,
-                responsive: [
-                      {
-                        breakpoint: 768,
-                        settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-                          slidesToShow: 2
-                        }
-                      },
-                      {
-                        breakpoint: 480,
-                        settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-                          slidesToShow: 1
-                        }
-                      }
-                    ]
-              });
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-              })
-          })
+
+      });
     </script>
   </body>
 </html>
