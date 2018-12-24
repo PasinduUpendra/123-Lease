@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
@@ -38,7 +38,7 @@
         </div>
       </div>
       <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+        <div class="container-fluid">
             <a href="#" class="navbar-brand"><img src="img/123Lease_logo.png" alt="123 Lease"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -283,78 +283,7 @@
 
 
     <script type="text/javascript">
-      jQuery(document).ready(function(){
-          $(function () {
-             $("#price-selector").ionRangeSlider({
-                skin: "big",
-                type: "double",
-                grid: false,
-                min: 0,
-                max: 2000,
-                from: 200,
-                to: 800,
-                prefix: "€"
-              });
-             });
-            
-                 $('.main-img').slick({
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  arrows: false,
-                  fade: true,
-                  asNavFor: '.gallery-nav'
-                });
-                $('.gallery-nav').slick({
-                  slidesToShow: 5,
-                  slidesToScroll: 1,
-                  asNavFor: '.main-img',
-                  dots: false,
-                  arrows: true,
-                  prevArrow: $('.slider-prev'),
-                  nextArrow: $('.slider-next'),
-                  focusOnSelect: true
-                });
-            $(function() {
-              $('.pricing-box').on('click', '.pricing-col', function() {
-                $('.pricing-box .pricing-col.active').removeClass('active');
-                $(this).addClass('active');
-              });
-            });
-            $('.testimonial').slick({
-                infinite: true,
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                arrows: true,
-                prevArrow: $('.slider-prev'),
-                nextArrow: $('.slider-next'),
-                speed: 500,
-                responsive: [
-                      {
-                        breakpoint: 768,
-                        settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-                          slidesToShow: 2
-                        }
-                      },
-                      {
-                        breakpoint: 480,
-                        settings: {
-                          arrows: false,
-                          centerMode: true,
-                          centerPadding: '40px',
-                          slidesToShow: 1
-                        }
-                      }
-                    ]
-              });
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-              })
-          })
+      /** jQuery Code **/
     </script>
   </body>
 </html>
