@@ -17,6 +17,12 @@ ul {
 .breadcrumb-item+.breadcrumb-item::before {
     content: '>>' !important;
 }
+.fw-100 {
+    font-weight: 100;
+}
+.fw-200 {
+    font-weight: 200;
+}
 .fw-500 {
     font-weight: 500;
 }
@@ -194,6 +200,12 @@ ul {
 }
 #hero-calculator {
     margin-top: -5%;
+}
+#hero-section .btn {
+    font-size: .9em;
+}
+#hero-section .btn-green:after {
+    display: none;
 }
 .cal-column {
     background-color: #ffffff;
@@ -378,7 +390,7 @@ ul {
     background: url(../img/footer-bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
-    padding-top: 15vh;
+    padding-top: 22vh;
     color: #fff;
 }
 .footer-top a {
@@ -899,6 +911,90 @@ ul {
 .sidebar-mobile {
     display: none;
 }
+.page-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+.page-content {
+    background: #f9fafa;
+}
+ul.green-bullet {
+  list-style: none;
+}
+ul.green-bullet li {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: #acacac;
+    font-weight: 200;
+}
+ul.green-bullet li:before {
+    content: '';
+    background: url(../img/green-bullet.png);
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 14px;
+    margin-left: -30px;
+    position: absolute;
+}
+ul.number-list {
+   list-style: none; 
+}
+ul.number-list li {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: #acacac;
+    font-weight: 200;
+}
+.li-number {
+    color: #ffac53;
+    font-weight: 600;
+    margin-left: -22px;
+    margin-right: 14px;
+}
+.content-table {
+    text-align: center;
+    border-radius: 5px;
+}
+.content-table th{
+    color: #ffac53;
+    font-weight: 500;
+}
+.content-table td {
+    color: #acacac;
+    font-weight: 100;
+}
+.h-cell {
+    background: #f6fcff;
+}
+.side-reach {
+    list-style: none;
+}
+.side-reach li {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.side-reach > li > a {
+    color: #2d546d;
+}
+.side-reach > li > a > img{
+    margin-right: 18px;
+}
+.side-contact, .side-faq {
+    background: #ffffff;
+}
+.faq-list {
+    list-style: none;
+    margin-left: 14px;
+}
+.faq-list li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #717e87;
+    font-weight: 300;
+}
 /* 
   ##Device = iMac 5K
   ##Screen = 2520
@@ -940,6 +1036,7 @@ ul {
     }
 
 }
+
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
