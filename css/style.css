@@ -1056,6 +1056,17 @@ ul.number-list li {
     .navbar-brand img {
         max-width: 200px;
     }
+    .top-bar-link {
+        text-align: center;
+        width: 100%;
+    }
+    #navigation .nav-item::after, .nav-item.active::after {
+        margin-left: -1%;
+    }
+    #navigation .nav-item:hover::after, #navigation .nav-item.active::after {
+        width: 15%;
+        visibility: visible;
+    }
     #hero-section {
         height: 100vh;
         background-size: cover;
